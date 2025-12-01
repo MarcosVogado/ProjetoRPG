@@ -93,6 +93,4 @@ curl -X POST https://localhost:7226/api/missoes/1/personagens -H "Content-Type: 
 - Certificado HTTPS: use `dotnet dev-certs https --trust` ou use HTTP na GUI.
 - Migrations: use apenas `20251201032425_Inicial` (existe um arquivo duplicado desativado `20251201034500_Inicial.cs` para evitar conflito de nome).
 
-## Arquivos de apoio
-- `ProjetoRPG.http` tem chamadas prontas para personagens/missoes/atribuicoes.
-- `WeatherForecast.cs` do template ainda existe; pode ser removido se desejar.
+
