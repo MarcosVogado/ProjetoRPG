@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="ProjetoRPG/ProjetoRPG.csproj" />
+  <Project Path="GuildaClient/GuildaClient.csproj" />
 </Solution>

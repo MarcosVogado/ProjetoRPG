@@ -1,6 +1,60 @@
-@ProjetoRPG_HostAddress = http://localhost:5279
+@host = https://localhost:7226
 
-GET {{ProjetoRPG_HostAddress}}/weatherforecast/
-Accept: application/json
+### Personagens
+GET {{host}}/api/personagens
 
 ###
+POST {{host}}/api/personagens
+Content-Type: application/json
+
+{
+  "nome": "Arthas",
+  "classe": 1,
+  "nivel": 5,
+  "vida": 120,
+  "mana": 60,
+  "moral": 80,
+  "patenteGuilda": "Tenente"
+}
+
+###
+PUT {{host}}/api/personagens/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "Arthas",
+  "classe": 1,
+  "nivel": 6,
+  "vida": 140,
+  "mana": 70,
+  "moral": 85,
+  "patenteGuilda": "Capitao"
+}
+
+###
+DELETE {{host}}/api/personagens/1
+
+### Missoes
+GET {{host}}/api/missoes
+
+###
+POST {{host}}/api/missoes
+Content-Type: application/json
+
+{
+  "titulo": "Escoltar caravana",
+  "descricao": "Proteja a caravana ate a cidade vizinha",
+  "dificuldade": 3,
+  "recompensaOuro": 150,
+  "status": 1
+}
+
+###
+POST {{host}}/api/missoes/1/personagens
+Content-Type: application/json
+
+{
+  "personagemId": 1,
+  "funcaoNoGrupo": "Tank"
+}
